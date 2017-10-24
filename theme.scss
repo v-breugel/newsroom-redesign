@@ -1,0 +1,483 @@
+/*
+  VARIABLES AND MIXINS
+*/
+
+$page-width: 1000px;
+
+// colors
+
+$border-color: #e1e1e1;
+
+// spacing
+
+$spacing-1: 5px;
+$spacing-2: 10px;
+$spacing-3: 20px;
+$spacing-4: 40px;
+
+$main-modules-spacing: $spacing-4;
+$side-modules-spacing: $spacing-3;
+
+// typography
+
+$font-base: normal 16px/1.5 Arial;
+$font-base-color: #666;
+
+$font-page-title: bold 28px/1.1 Arial;
+$font-page-title-color: #333;
+$font-page-title-spacing: $spacing-3;
+
+$font-page-subtitle: normal 20px/1.25 Arial;
+$font-page-subtitle-color: #999;
+$font-page-subtitle-spacing: $spacing-2;
+
+$font-module-main: bold 24px/1.1 Arial;
+$font-module-main-color: #333;
+$font-module-main-spacing: $spacing-2;
+
+$font-module-side: bold 20px/1.25 Arial;
+$font-module-side-color: #333;
+$font-module-side-spacing: $spacing-2;
+
+$font-headline: bold 20px/1.25 Arial;
+$font-headline-color: #333;
+$font-headline-spacing: $spacing-2;
+
+$font-primary-button: bold 16px/1 Arial;
+$font-primary-button-color: #fff;
+
+// media queries
+$small-min: 768px;
+$small-max: ($small-min - 1);
+
+@mixin readMore {
+
+}
+
+@mixin primaryButton {
+    font: $font-primary-button;
+    color: $font-primary-button-color;
+    padding: 10px 20px;
+    background: #666;
+    display: inline-block;
+    &:hover {
+        background: #999;
+        text-decoration: none;
+    }
+}
+
+@mixin textLink {
+    color: #03a9f4;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/*
+  HTML, BODY OVERWRITES
+*/
+
+html,
+body {
+    overflow: unset;
+    height: unset;
+}
+
+body {
+    font-size: unset;
+    line-height: unset;
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+}
+
+
+/*
+  CLIENT STYLE
+*/
+
+.ppcl .header {
+    background: url(//presspage-production-content.s3.amazonaws.com/templates/50/2138/header11.jpg) no-repeat center;
+    background-size: cover;
+    height: 300px;
+}
+
+.ppcl .footer {
+    background: url(//presspage-production-content.s3.amazonaws.com/templates/50/2138/687474703a2f2f692e696d6775722e636f6d2f5959374b4a73532e706e67.png) no-repeat center;
+    background-size: contain;
+    height: 300px;
+}
+
+
+
+/*
+  MODULES RESETS
+*/
+
+.title_big,
+.title_big h2,
+.title_big_headlines,
+.pp_headline h3, .pp_headline_umbrella h3 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.title_big_headlines a {
+    font: inherit;
+    color: inherit;
+}
+
+.latestrelease_table .div_date_location,
+.text_latestnews {
+    margin: 0;
+}
+
+.td_latestrelease_thumbnail {
+    margin-right: 0;
+}
+.td_headlines {
+    padding: 0;
+}
+
+.title_big h2 {
+    display: block;
+}
+
+.ppmodule_headlines {
+    position: relative;
+}
+
+.table_headlines {
+    display: flex;
+}
+.pp_headlines_iconset {
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.pp_headlines_iconset {
+    display: flex;
+    align-items: flex-end;
+
+    .pp_headlines_rss {
+        order:4;
+    }
+
+    .pp_headlines_icon {
+        order:3;
+    }
+    .headlines_prevnext:nth-child(3) {
+        order:2;
+    }
+    .headlines_prevnext:nth-child(4) {
+        order: 1;
+    }
+}
+
+@media (min-width: $small-min) {
+    .td_headlines > div {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+
+.pp_headline_icon {
+    margin-left: auto;
+    margin-right: 0;
+    flex-shrink:0;
+}
+
+@media (max-width: $small-max) {
+    .pp_date_divider.span_publishdate_divider,
+    .pp_headline_icon {
+        display: none;
+    }
+
+    .pp_publishdate {
+        margin-bottom: $spacing-1;
+        width: 100%;
+    }
+}
+
+.pp_publishdate {
+    display: flex;
+}
+
+.pp_headline {
+    max-width:none;
+    padding:0;
+}
+
+.ie8 .pp_headline,
+.ie9 .pp_headline{
+    max-width: 70%;
+}
+
+.extras_newsroom_header,
+.extras_header,
+.div_extras,
+.extras_footer {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.extras_content_right {
+    width: auto;
+    margin-left: 0;
+    padding: 0;
+}
+
+table.contact_text {
+    width: 100%;
+}
+
+.img_whiteborder {
+    width: 75px;
+    border:0;
+}
+.div_contacts_image {
+    padding: 0;
+    background:none;
+}
+.contact_text_td {
+    width: 75px;
+}
+
+.td_contactsinfo {
+    width: auto;
+}
+.pp_email {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.social_spacer_right {
+    margin-right: 0;
+}
+.social_spacer_left {
+    margin-left: 0;
+}
+
+.div_facebookicon,
+.div_linkedinicon,
+.div_twittericon,
+.div_xingicon {
+    margin-top: 0;
+    float: none;
+}
+
+.contact_text_td > a {
+    overflow: visible;
+    display: inline-block;
+    margin-left: $spacing-1;
+    margin-top: $spacing-2;
+    margin-bottom: $spacing-1;
+    float: left;
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+}
+
+/*
+  NEWSROOM LAYOUT
+*/
+
+#pp-main,
+#pp-main>* {
+    box-sizing: border-box;
+}
+
+#maintable {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:$small-min) {
+    #maintable {
+        flex-direction: row;
+    }
+}
+
+.pp-main-column {
+    margin: 0;
+    width: unset;
+}
+
+@media (min-width:$small-min) {
+    .pp-main-column {
+        flex: 3;
+    }
+
+}
+
+.content_main_case_right,
+.content_main_client_right,
+.content_main_case_left,
+.content_main_client_left {
+    margin: 0;
+}
+
+.content_main_case,
+.content_main_client {
+    padding: 0;
+}
+
+.pp-side-column {
+    margin: 0;
+    width: unset;
+    vertical-align: unset;
+}
+
+@media (min-width:$small-min) {
+    .pp-side-column {
+        flex: 1;
+        margin-right: $spacing-3;
+    }
+}
+
+@media (max-width:$small-max) {
+    .pp-side-column+.pp-main-column {
+        order: -1;
+    }
+}
+
+.div_main_extras {
+    height: unset;
+    width: unset;
+    padding: 0;
+}
+
+
+#maintable {
+    max-width: $page-width;
+    margin-top: $spacing-4;
+}
+
+/*
+    SHARED STYLING
+*/
+
+#pp-main p {
+    margin-top: $spacing-2;
+    margin-bottom: $spacing-2;
+}
+
+.pp-main-column .pp_moduleblock {
+    margin-bottom: $main-modules-spacing;
+}
+
+.pp-side-column .pp_moduleblock {
+    margin-bottom: $side-modules-spacing;
+}
+
+.pp_date_day,
+.pp_date_divider,
+.pp_date_location,
+.pp_date_month,
+.pp_date_time,
+.pp_date_timewrapper,
+.pp_date_timezone,
+.pp_date_year {
+    margin-right: $spacing-1;
+}
+
+/* Typography */
+
+#pp-main {
+    font: $font-base;
+    color: $font-base-color;
+}
+
+.pp-main-column,
+.pp-content-top {
+    .extras_headertitle_right,
+    .extras_headertitle,
+    .title_big h2,
+    .title_big_headlines,
+    .pp_coverageoverview_title_left,
+    .pp-newsreel-slider-title h2,
+    .form_title {
+        font: $font-module-main;
+        color: $font-module-main-color;
+        margin-bottom: $font-module-main-spacing;
+    }
+}
+
+.pp-side-column {
+    .extras_headertitle_right,
+    .extras_headertitle,
+    .title_big h2,
+    .title_big_headlines,
+    .pp_coverageoverview_title_left,
+    .pp-newsreel-slider-title h2,
+    .form_title {
+        font: $font-module-side;
+        color: $font-module-side-color;
+        margin-bottom: $font-module-side-spacing;
+    }
+}
+
+
+/*
+  MODULES STYLING
+*/
+
+/* Featured release default */
+
+.text_latestnews_more {
+    @include textLink;
+}
+
+.latestrelease_table .div_date_location {
+    margin-bottom: $spacing-1;
+}
+
+/* Headlines list */
+
+.td_headlines {
+    border-color: $border-color;
+    padding-top: $spacing-2;
+    padding-bottom: $spacing-2;
+    font: $font-base;
+    color: $font-base-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+.td_headlines h3 {
+    @include textLink;
+}
+.pp_headlines_iconset {
+    margin-bottom: $font-module-main-spacing;
+}
+
+.pp_headline_icon {
+    padding: $spacing-1 $spacing-1 $spacing-1 $spacing-2;
+}
+
+.span_publishdate_divider {
+    padding-left: $spacing-1;
+    padding-right: $spacing-1;
+}
+
+
+/* Media Library Button*/
+
+.extras_newsroom_headertitle_right a {
+    @include primaryButton;
+}
+
+/* Contact default */
+
+.emaillink {
+    @include textLink;
+}
