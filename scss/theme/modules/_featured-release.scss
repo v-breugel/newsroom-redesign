@@ -1,0 +1,52 @@
+/*
+    Default Layout
+*/
+
+.text_latestnews_more {
+    @include textLink;
+}
+
+.latestrelease_table .div_date_location {
+    margin-bottom: $spacing-1;
+}
+
+@media (max-width: $small-max) {
+    .pp_email {
+        width: auto;
+    }
+}
+
+/*
+    Top-image Layout
+*/
+
+.topimage-image {
+    padding-top: $aspect-ratio-headline;
+    margin-bottom: $spacing-2;
+}
+
+/*
+    Overlay layout
+*/
+
+.latestrelease_innerwrapper {
+    background: $overlay-color;
+}
+
+@media (max-width: $x-small-max) {
+    .latestrelease_table .text_latestnews_text,
+    .latestrelease_table  #div_date_location_newsroom {
+        display: none;
+    }
+    #latestrelease_overlay .title_big h2 {
+        margin-bottom: 0;
+    }
+}
+
+/*
+    Fullwidth overlay layout
+*/
+
+.pp-content-top #latestrelease_overlay {
+    padding-top: 30%;
+}

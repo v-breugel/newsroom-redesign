@@ -1,0 +1,271 @@
+html,
+body {
+    overflow: unset;
+    height: unset;
+}
+
+body {
+    font-size: unset;
+    line-height: unset;
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+}
+
+.title_big,
+.title_big h2,
+.title_big_headlines,
+.pp_headline h3, .pp_headline_umbrella h3 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.title_big_headlines a,
+.extras_headertitle_right a {
+    font: inherit;
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.title_big:hover a {
+    text-decoration: none;
+}
+
+.latestrelease_table .div_date_location,
+.text_latestnews {
+    margin: 0;
+}
+
+.td_latestrelease_thumbnail {
+    margin-right: 0;
+}
+
+.td_headlines {
+    padding: 0;
+}
+
+.title_big h2 {
+    display: block;
+}
+
+.ppmodule_headlines {
+    position: relative;
+}
+
+.headlines_small_icon {
+    display: none;
+}
+
+.boxgrid_library_featured h3,
+.headlinefeatured_date_text {
+    color:#fff;
+}
+
+.boxgrid_library_featured h3 {
+    margin:0;
+}
+.table_headlines {
+    display: flex;
+}
+
+.pp_headlines_iconset {
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.pp_headlines_iconset {
+    display: flex;
+    align-items: flex-end;
+
+    .pp_headlines_rss {
+        order: 4;
+    }
+
+    .pp_headlines_icon {
+        order: 3;
+    }
+    .headlines_prevnext:nth-child(3) {
+        order: 2;
+    }
+    .headlines_prevnext:nth-child(4) {
+        order: 1;
+    }
+}
+
+@media (min-width: $small-min) {
+    .td_headlines > div {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.pp_headline_icon {
+    margin-left: auto;
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+@media (max-width: $small-max) {
+    .pp_date_divider.span_publishdate_divider,
+    .pp_headline_icon {
+        display: none;
+    }
+
+    .pp_publishdate {
+        margin-bottom: $spacing-1;
+        width: 100%;
+    }
+}
+
+.pp_publishdate {
+    display: flex;
+}
+
+.pp_headline {
+    max-width: none;
+    padding: 0;
+}
+
+.ie8 .pp_headline,
+.ie9 .pp_headline {
+    max-width: 70%;
+}
+
+.extras_newsroom_header,
+.extras_header,
+.div_extras,
+.extras_footer {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.extras_content_right {
+    width: auto;
+    margin-left: 0;
+    padding: 0;
+}
+
+table.contact_text {
+    width: 100%;
+}
+
+.img_whiteborder {
+    width: 75px;
+    border: 0;
+}
+
+.div_contacts_image {
+    padding: 0;
+    background: none;
+}
+
+.contact_text_td {
+    width: 75px;
+}
+
+.td_contactsinfo {
+    width: auto;
+}
+
+.pp_email {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.social_spacer_right {
+    margin-right: 0;
+}
+
+.social_spacer_left {
+    margin-left: 0;
+}
+
+.div_facebookicon,
+.div_linkedinicon,
+.div_twittericon,
+.div_xingicon {
+    margin-top: 0;
+    float: none;
+}
+
+.contact_text_td > a {
+    overflow: visible;
+    display: inline-block;
+    margin-left: $spacing-1;
+    margin-top: $spacing-2;
+    margin-bottom: $spacing-1;
+    float: left;
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+}
+
+#pp-main,
+#pp-main * {
+    box-sizing: border-box;
+}
+
+.div_main_extras {
+    height: unset;
+    width: unset;
+    padding: 0;
+}
+
+.content_main_case_right,
+.content_main_client_right,
+.content_main_case_left,
+.content_main_client_left {
+    margin: 0;
+}
+
+.content_main_case,
+.content_main_client {
+    padding: 0;
+}
+
+.pp-side-column {
+    margin: 0;
+    width: unset;
+    vertical-align: unset;
+}
+
+.pp_date_day,
+.pp_date_divider,
+.pp_date_location,
+.pp_date_month,
+.pp_date_time,
+.pp_date_timewrapper,
+.pp_date_timezone,
+.pp_date_year {
+    margin-right: $spacing-1;
+    margin-right: 5px;
+}
+
+.pp_email,
+.pp_extraphone,
+.pp_phonenumber {
+    float: none;
+}
+
+// headlines list image reset hover
+
+.headlinefeatured_date_text {
+    display: none;
+}
+
+.caption_library_featured .boxcaption_library_featured {
+    top: auto!important;
+    bottom:0;
+    height:auto;
+}
+
+.boxcaption_library_featured {
+    display: flex;
+}

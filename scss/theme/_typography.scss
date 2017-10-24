@@ -1,0 +1,47 @@
+// paragraphs
+
+#pp-main p {
+    margin-top: $spacing-2;
+    margin-bottom: $spacing-2;
+}
+
+
+// base font
+
+#pp-main {
+    font: $font-base;
+    color: $font-base-color;
+}
+
+// main column font
+
+.pp-main-column,
+.pp-content-top {
+    .extras_headertitle_right,
+    .extras_headertitle,
+    .title_big h2,
+    .title_big_headlines,
+    .pp_coverageoverview_title_left,
+    .pp-newsreel-slider-title h2,
+    .form_title {
+        font: $font-module-main;
+        color: $font-module-main-color;
+        margin-bottom: $font-module-main-spacing;
+    }
+}
+
+// side column font
+
+.pp-side-column {
+    .extras_headertitle_right,
+    .extras_headertitle,
+    .title_big h2,
+    .title_big_headlines,
+    .pp_coverageoverview_title_left,
+    .pp-newsreel-slider-title h2,
+    .form_title {
+        font: $font-module-side;
+        color: $font-module-side-color;
+        margin-bottom: $font-module-side-spacing;
+    }
+}

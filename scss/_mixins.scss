@@ -1,0 +1,25 @@
+@mixin readMore {
+
+}
+
+@mixin primaryButton {
+    font: $font-primary-button;
+    color: $font-primary-button-color;
+    padding: 10px 20px;
+    background: #666;
+    display: inline-block;
+    &:hover {
+        background: #999;
+        text-decoration: none;
+    }
+}
+
+@mixin textLink {
+    color: #03a9f4;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

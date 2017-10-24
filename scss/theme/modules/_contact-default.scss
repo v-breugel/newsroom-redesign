@@ -1,0 +1,52 @@
+.emaillink {
+    @include textLink;
+}
+
+.pp_contacts_div {
+   border-color: $border-color;
+}
+
+.pp_contacts_div:not(:first-child) {
+    margin-top: $spacing-2;
+    padding-top: $spacing-2;
+}
+
+// two contact modules next to eachother in the main column
+// some extra styling to make sure last row contacts don't have margin-bottom.
+.pp-main-column {
+    #ppmodule_contacts .extras_content_right {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #ppmodule_contacts .pp_contacts_div:first-child {
+        margin-bottom: $spacing-3;
+    }
+
+    .pp_contacts_div {
+        float: left;
+        width: 50%;
+        margin-top: 0;
+        padding-top: 0;
+        border: 0;
+        margin-bottom: $spacing-3;
+
+        // as the contact modules are
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $small-min) {
+            &:nth-last-child(2) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: $small-max) {
+            width: 100%;
+        }
+    }
+
+    .pp_email {
+        width: auto;
+    }
+}

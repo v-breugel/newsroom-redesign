@@ -1,0 +1,58 @@
+//
+
+$page-width: 1000px;
+
+// colors
+
+$primary-color: #01618d;
+$border-color: #e1e1e1y;
+
+$overlay-color: rgba($primary-color, 0.75);
+
+// spacing
+
+$spacing-1: 5px;
+$spacing-2: 10px;
+$spacing-3: 20px;
+$spacing-4: 40px;
+
+$main-modules-spacing: $spacing-4;
+$side-modules-spacing: $spacing-3;
+
+// aspect ratio
+
+$aspect-ratio-headline: 66.666667%;
+
+// typography
+
+$font-base: normal 16px/1.5 Arial;
+$font-base-color: #666;
+
+$font-page-title: bold 28px/1.1 Arial;
+$font-page-title-color: #333;
+$font-page-title-spacing: $spacing-3;
+
+$font-page-subtitle: normal 20px/1.25 Arial;
+$font-page-subtitle-color: #999;
+$font-page-subtitle-spacing: $spacing-2;
+
+$font-module-main: bold 24px/1.1 Arial;
+$font-module-main-color: #333;
+$font-module-main-spacing: $spacing-2;
+
+$font-module-side: bold 20px/1.25 Arial;
+$font-module-side-color: #333;
+$font-module-side-spacing: $spacing-2;
+
+$font-headline: bold 20px/1.25 Arial;
+$font-headline-color: #333;
+$font-headline-spacing: $spacing-2;
+
+$font-primary-button: bold 16px/1 Arial;
+$font-primary-button-color: #fff;
+
+// media queries
+$x-small-min: 480px;
+$x-small-max: ($x-small-min - 1);
+$small-min: 768px;
+$small-max: ($small-min - 1);
