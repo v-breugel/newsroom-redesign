@@ -49,4 +49,8 @@
 
 .pp-content-top #latestrelease_overlay {
     padding-top: 30%;
+
+    @media (max-width: $x-small-max) {
+        padding-top: 50%;
+    }
 }

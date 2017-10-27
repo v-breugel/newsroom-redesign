@@ -13,7 +13,7 @@
     color: $font-base-color;
 }
 
-// main column font
+// main column module title font
 
 .pp-main-column,
 .pp-content-top {
@@ -30,7 +30,7 @@
     }
 }
 
-// side column font
+// side column module title font
 
 .pp-side-column {
     .extras_headertitle_right,
@@ -40,8 +40,17 @@
     .pp_coverageoverview_title_left,
     .pp-newsreel-slider-title h2,
     .form_title {
-        font: $font-module-side;
-        color: $font-module-side-color;
-        margin-bottom: $font-module-side-spacing;
+        font: $font-headline;
+        color: $font-headline-color;
+        margin-bottom: $font-headline-spacing;
     }
+}
+
+// headlines font
+
+.pp-block-item-title h2,
+.pp_bigheadlines_title h2 {
+    font: $font-module-side;
+    color: $font-module-side-color;
+    margin-bottom: $font-module-side-spacing;
 }

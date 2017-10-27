@@ -2,6 +2,10 @@
     @include textLink;
 }
 
+/*
+    Default layout
+ */
+
 .pp_contacts_div {
    border-color: $border-color;
 }
@@ -50,3 +54,26 @@
         width: auto;
     }
 }
+
+/*
+    Avatar layout
+ */
+
+
+.pp-contact-avatar-content-container {
+    padding-top: $spacing-2;
+}
+
+.pp-contact-avatar-icons {
+    margin-top: $spacing-2;
+    display: flex;
+}
+
+.pp-contact-avatar-icons a {
+    margin-left: $spacing-1;
+}
+
+.pp-main-column .pp-contact-avatar {
+
+}
+
