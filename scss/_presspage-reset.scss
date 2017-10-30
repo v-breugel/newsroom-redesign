@@ -319,6 +319,10 @@ table.contact_text {
     .pp_bigheadlines_title {
         padding-left: 0;
     }
+
+    .pp_bigheadlines_date {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: $x-small-max) {
@@ -346,14 +350,15 @@ table.contact_text {
 
 .pp_big_headlines_item_container {
     margin-left: 0;
-    max-width: 100%;
+    max-width: none;
 }
 
 .mm_listitem {
     min-height: 0;
     overflow: auto;
+    position: relative;
 
-    @media (min-width: $x-small-min) {
+    @media (min-width: 601px) {
         display: flex;
     }
 }
@@ -394,6 +399,64 @@ table.contact_text {
     border: 0;
     text-decoration: none;
 }
+#headlines_extras .extras_content_right {
+    display: flex;
+    flex-direction: column;
+}
+
+#headlines_extras .pp_headlines_iconset {
+    order: -1;
+    float: none;
+    margin-left: 0;
+}
+.headlines_small_date {
+    display: none;
+}
+.headlines_small_title {
+    border: 0;
+    margin-bottom: $spacing-3;
+    padding-bottom: 0;
+}
+.featuredheadline_right,
+.pp-rss-side__text,
+.pp-rss-side__thumbnail {
+    margin-bottom: $spacing-2;
+}
+
+.pp_bigheadlines_share {
+    position: absolute;
+    right:0;
+    top:0;
+    float: none;
+    margin:0;
+}
+
+.pp_bigheadlines_tags {
+    margin-top: 0;
+}
+
+.pp_bigheadlines_tags_title {
+    display: none;
+}
+.pp_bigheadlines_title--share + h3 {
+    padding-right: 35px;
+}
+.pp_bigheadlines_title h3 {
+    clear: both;
+    margin: 0;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    font-weight: bold;
+}
+
+/*
+    Headline blocks
+ */
+
+.pp-block-item-readmore {
+    display: inline-block;
+}
 
 html[lang='en'] .pp_bigheadlines_buttons .pp_button_grey:after {
     content: "Show next";
@@ -411,4 +474,49 @@ a.pp_button_grey_back:after {
 .pp_button_grey:after {
     margin-top: 5px;
     margin-left: 1px;
+}
+.pp_grid.pp-headline-block {
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 600px) {
+        display: block;
+    }
+}
+.pp-block-item {
+    height: auto!important;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left:0;
+
+    @media (max-width: 600px) {
+        &:not(:last-child) {
+            margin-bottom: $spacing-3;
+        }
+    }
+}
+
+.pp-block-item-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pp_blockheadlines_tools {
+    margin-bottom: 0;
+}
+
+.pp-block-item-container {
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.pp-headlineblock-nav {
+    display: block;
 }

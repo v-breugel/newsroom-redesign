@@ -16,16 +16,26 @@
 
 .mm_listitem {
     margin-bottom: $spacing-3;
+
+    @media (min-width: 601px) {
+        margin-left: -$spacing-3;
+    }
+
 }
 
 .mm_listitem .pp_one-of-four {
     width: 33.33333%;
     float: left;
-    flex: 1;
 
-    @media (max-width: $x-small-max) {
+    @media (max-width: 600px) {
         margin-bottom: $spacing-2;
+
     }
+
+    @media (min-width: 601px) {
+        padding-left: $spacing-3;
+    }
+
 }
 
 .mm_listitem .pp_three-of-four {
@@ -33,9 +43,8 @@
     flex-direction: column;
     width: 66.66667%;
     float: left;
-    flex: 2;
 
-    @media (min-width: $x-small-min) {
+    @media (min-width: 601px) {
         padding-left: $spacing-3;
     }
 
@@ -45,13 +54,31 @@
     order: -1;
 }
 
+.pp_sharethis_custom {
+    background-color: $primary-color;
+}
+
+.pp_bigheadlines_tags div {
+    margin-top: $spacing-2;
+    margin-right: $spacing-2;
+}
+
+a.pp_bigheadlines_tags_link {
+    background: $primary-color;
+    padding: ($spacing-1 / 2) $spacing-2;
+}
+
 .pp_bigheadlines_buttons a {
     line-height: 1;
     @include primaryButton;
     padding: 10px 20px;
 }
 
-@media (max-width: $x-small-max) {
+.pp_bigheadlines_title h3 {
+    margin-bottom: $spacing-2;
+}
+
+@media (max-width: 600px) {
     .pp_bigheadlines_date {
         display: none;
     }
